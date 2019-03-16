@@ -4,13 +4,13 @@ The command line is an extremely powerful tool. It often gets overlooked by
 data scientists in favor of "fancier" coding languages. You really shouldn't
 do that though. Here are three (of many) reasons why:
 
-  * It's very likely you won't have a GUI if you're working on remote servers
+- It's very likely you won't have a GUI if you're working on remote servers
   like Amazon's AWS or Google Cloud. You'll have to do command line.
-  * There are command line tools that can make your life a lot easier like
+- There are command line tools that can make your life a lot easier like
   scp, grep, curl, etc
-  * Jupyter Notebooks aren't an endpoint for development - so running python
+- Jupyter Notebooks aren't an endpoint for development - so running python
   scripts from the command line is going to be mandatory at some point in your
-  career.
+    career.
 
 With that in mind, we're going to explore the basics of surviving in the
 command line today. Note that this exercise assumes you are working from top
@@ -133,6 +133,7 @@ What if we want to read that file back out to the terminal?
 ```bash
 cat test_file.txt
 ```
+
 `cat` takes whatever is in the file and reads it out to stdout one line at a
 time.
 
@@ -150,7 +151,9 @@ This prints the data directly to stdout and we can see the whole dataset.
 Nice. 
 
 > Let's save the output of the `curl` command to a file called `data.txt`. How
-would we do that?
+> would we do that?
+
+*curl https://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/auto-mpg.data > data.txt*
 
 Now that we have the data file, let's learn how to manipulate files.
 
@@ -199,8 +202,9 @@ ls -lh
 
 > What changed?
 
-If instead copying we just want to change the name of a file, we can do:
+*Added "B" to byte size*
 
+If instead copying we just want to change the name of a file, we can do:
 
 ```bash
 mv data2.txt NEW_FILE_NAME.txt
@@ -285,31 +289,32 @@ Or I can even check ALL of the files in the folder by introducing the
 `wild card`. A wild card is the command line way of saying, I'm not quite sure
 exactly which files I mean. Imagine we have these files:
 
-* test1.txt
-* test2.txt
-* tes.txt
-* pyfile.py
+- test1.txt
+- test2.txt
+- tes.txt
+- pyfile.py
 
 A wild card like `test*.txt` would match: 
 
-* test1.txt
-* test2.txt
+- test1.txt
+- test2.txt
 
 but not the others. A wild card like `tes*` would match:
 
-* test1.txt
-* test2.txt
-* tes.txt
+- test1.txt
+- test2.txt
+- tes.txt
 
 And a wildcard like `*.py` would match:
 
-* pyfile.py
+- pyfile.py
 
 I can also use this logic with something like `grep`
 
 ```bash
 grep "honda" *
 ```
+
 which will search every file in this directory for the string "honda".
 
 #### wc (word count)
@@ -320,6 +325,7 @@ with our dataset.
 ```bash
 cat data.txt | wc
 ```
+
 This returns the number of: lines, words, and characters in the file. So we
 can immediately see that our dataset has 398 rows.
 
@@ -339,8 +345,8 @@ works on any executable. Try also:
 ```bash
 which grep
 ```
-and it will show you where `grep` is installed on your system.
 
+and it will show you where `grep` is installed on your system.
 
 # Important Take-aways
 
@@ -354,13 +360,13 @@ executes from the command line or something else.
 
 For today, the main take-aways are:
 
-* pwd
-* cd
-* cp
-* mv
-* cat
-* mkdir
-* stdout vs pipes
+- pwd
+- cd
+- cp
+- mv
+- cat
+- mkdir
+- stdout vs pipes
 
 If you got all of that, then you can start to pickup more skills as you use
 things more.
@@ -382,3 +388,4 @@ man grep
 This will take you to a page with all of the details you never wanted to know
 about grep. You can scroll up and down with arrow keys, or quit by pressing
 `q`. There are man pages for pretty much every command. 
+
