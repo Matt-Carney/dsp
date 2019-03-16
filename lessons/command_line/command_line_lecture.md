@@ -72,7 +72,7 @@ directory.
 
 
 
-Enter pwd to print the working directory
+*Enter pwd to print the working directory*
 
 Let's get a few special things out of the way as well for command line. When
 we talk about folders, we don't always want to move "into" the next folder
