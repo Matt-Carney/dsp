@@ -438,6 +438,8 @@ What about for this one?
 ```
 drwx------   4 paulburkard  staff   136B Jun  6 10:16 Applications
 ```
+*User paulburkard has full access (read, write, execute) and the groups staff and system do not have any access.*
+
 #### Changing Permissions
 Now that you understand the access model, here are a few commands that allow you to change the permissions.
 
